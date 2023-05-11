@@ -10,8 +10,8 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
-  // const fullName = `${user.firstName} ${user.lastName}`;
-  const fullName = "Edward Lesan";
+  const fullName = `${user.firstName} ${user.lastName}`;
+  const userId = user._id;
 
   return (
     <nav>
@@ -23,7 +23,10 @@ const Navbar = () => {
         <input placeholder="Type to search..." />
       </div>
       <div className="nav_auth">
-        <h5 className="nav_fullname" onClick={() => navigate(`/profile/`)}>
+        <h5
+          className="nav_fullname"
+          onClick={() => navigate(`/profile/${userId}`)}
+        >
           {fullName}
         </h5>
         <IconButton onClick={() => dispatch(setLogout())}>
