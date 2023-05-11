@@ -1,0 +1,44 @@
+.form_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form_image_box {
+  border: 1px solid var(--mainDark);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.form_image_drop {
+  border: 2px dashed var(--mainDark);
+  padding: 1rem;
+}
+
+.form_image_drop:hover {
+  cursor: pointer;
+}
+
+.form_button {
+  background-color: var(--mainDark);
+  color: var(--light);
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.form_button:hover {
+  transform: scale(1.1);
+  transition: ease 0.2s all;
+}
+
+.form_auth {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--mainDark);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
