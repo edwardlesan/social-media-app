@@ -88,14 +88,19 @@ const NewPost = ({ picturePath }) => {
                 )}
 
                 {image && (
-                  <IconButton
+                  <div
                     onClick={() => setImage(null)}
-                    sx={{ width: "15%" }}
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "flex-end",
+                      marginTop: "10px",
+                    }}
                   >
                     <DeleteOutlined
                       sx={{ color: "#2c5784", cursor: "pointer" }}
                     />
-                  </IconButton>
+                  </div>
                 )}
               </div>
             )}

@@ -4,6 +4,7 @@ import UserComponent from "../components/UserComponent";
 import { useSelector } from "react-redux";
 import "./Home.css";
 import NewPost from "../components/NewPost";
+import FriendList from "../components/FriendList";
 
 const Home = () => {
   const { _id, picturePath } = useSelector((state) => state.user);
@@ -16,14 +17,7 @@ const Home = () => {
         <div className="home_feed">
           <NewPost picturePath={picturePath} />
         </div>
-        <div
-          style={{
-            width: "300px",
-            height: "600px",
-            backgroundColor: "#f5f5f5",
-            borderRadius: "10px",
-          }}
-        ></div>
+        <FriendList userId={_id} />
       </div>
     </div>
   );
